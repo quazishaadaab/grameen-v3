@@ -6,7 +6,6 @@ import Table from "../Table";
 import Error from "../Error";
 import { DataItem, Categories, ErrorDataItem, Data } from "../../dataUtilities";
 
-import styles from "../../../../.././styles";
 
 interface Props {
   endpoint: string;
@@ -46,26 +45,26 @@ const Endpoint = (props: Props) => {
 
   return (
     <>
-      <div className={styles.endpointContainer}>
-        <Note info className={styles.post}>
+      <div >
+        <Note info >
           POST
         </Note>
-        <div className={styles.endpointContents}>
-          <div className={styles.endpointHeader}>
+        <div >
+          <div >
             {props.name != null && (
-              <span className={styles.endpointName}>{props.name}</span>
+              <span >{props.name}</span>
             )}
-            <span className={styles.schema}>{props.schema}</span>
+            <span >{props.schema}</span>
           </div>
-          <div className={styles.endpointDescription}>{props.description}</div>
+          <div >{props.description}</div>
         </div>
-        <div className={styles.buttonsContainer}>
+        <div >
           <Button
             small
             centered
             wide
             secondary
-            className={styles.sendRequest}
+          
             onClick={getData}
           >
             {isLoading ? "Loading..." : `Send request`}
@@ -75,7 +74,7 @@ const Endpoint = (props: Props) => {
               small
               centered
               wide
-              className={styles.pdf}
+           
               href={`data:application/pdf;base64,${pdf}`}
               componentProps={{ download: "Asset Report.pdf" }}
             >

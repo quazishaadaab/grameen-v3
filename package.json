@@ -9,12 +9,46 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@apollo/client": "^3.6.9",
+    "@apollo/react-hooks": "^4.0.0",
+    "@emotion/react": "^11.10.0",
+    "@emotion/styled": "^11.10.0",
+    "@heroicons/react": "^1.0.6",
+    "@hookform/error-message": "^2.0.0",
+    "@mui/icons-material": "^5.8.4",
+    "@mui/material": "^5.10.0",
+    "@reduxjs/toolkit": "^1.8.4",
+    "@types/react-redux": "^7.1.24",
+    "@types/react-timeago": "^4.1.3",
+    "@types/redux-actions": "^2.6.2",
+    "@uiball/loaders": "^1.2.6",
+    "apollo-boost": "^0.4.9",
+    "graphql": "^15.8.0",
     "next": "12.2.4",
+    "next-auth": "^4.10.3",
+    "plaid": "^10.9.0",
+    "plaid-threads": "^11.5.0",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.34.0",
+    "react-hot-toast": "^2.3.0",
+    "react-plaid-link": "^3.3.2",
+    "react-redux": "^8.0.2",
+    "react-timeago": "^7.1.0",
+    "redux": "^4.2.0",
+    "redux-persist": "^6.0.0",
+    "sass": "^1.54.4",
+    "stepzen": "^0.20.1",
+    "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@types/node": "^18.7.1",
+    "@types/react": "^18.0.17",
+    "@types/react-dom": "^18.0.6",
+    "autoprefixer": "^10.4.8",
     "eslint": "8.21.0",
-    "eslint-config-next": "12.2.4"
+    "eslint-config-next": "12.2.4",
+    "postcss": "^8.4.16",
+    "tailwindcss": "^3.1.8"
   }
 }

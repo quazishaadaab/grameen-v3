@@ -1,7 +1,9 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
+module.exports = {
   reactStrictMode: true,
-  swcMinify: true,
-}
+// need to specify domains when importing images 
+  images: {
 
-module.exports = nextConfig
+    domains:['links.papareact.com','avatars.dicebear.com','logomakercdn.truic.com'],
+  }
+}

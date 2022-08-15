@@ -1,0 +1,133 @@
+import React from 'react'
+
+function Sidebar() {
+  return (
+    // the sidebar
+    <div className='flex-[15%] bg-[#111111] max-h-[100%] '>
+
+    {/*the header where the logo is  */}
+    <div className="bg-red-400 h-[10%] flex items-center justify-center p-3 ">
+
+        <div className="bg-yellow-100 h-[40px] w-[40px] p-3"></div>
+
+    <div>
+        <div className="bg-purple-300 text-sm text-white font-bold ">GrameenCanada Co.</div>
+        <div className="bg-pink-100 text-sm text-black"> Toronto,Ontario</div>
+
+    </div>
+        
+        </div>
+
+
+{/* main menu */}
+    <div className="bg-blue-400 h-[45%] items-center p-3">
+        
+        <div className="bg-slate-200 text-sm font-bold text-white content-start">MAIN MENU</div>
+<div className="bg-orange-400 h-[90%] mt-2 space-y-2 items-start">
+
+{/* individual sidebar option to be clicked */}
+<div className="bg-orange-300 flex gap-2 cursor-pointer hover:bg-[#052440]  ">
+    <div className="bg-orange-100 h-[20px] w-[20px]"></div>
+    <div className='bg-organge-200 text-sm text-white'>Dashboard</div>
+</div>
+
+<div className="bg-orange-300 flex gap-2 cursor-pointer hover:bg-[#052440]  ">
+    <div className="bg-orange-100 h-[20px] w-[20px]"></div>
+    <div className='bg-organge-200 text-sm text-white'>Dashboard</div>
+</div>
+
+<div className="bg-orange-300 flex gap-2 cursor-pointer hover:bg-[#052440]  ">
+    <div className="bg-orange-100 h-[20px] w-[20px]"></div>
+    <div className='bg-organge-200 text-sm text-white'>Dashboard</div>
+</div>
+
+<div className="bg-orange-300 flex gap-2 cursor-pointer hover:bg-[#052440]  ">
+    <div className="bg-orange-100 h-[20px] w-[20px]"></div>
+    <div className='bg-organge-200 text-sm text-white'>Dashboard</div>
+</div>
+
+<div className="bg-orange-300 flex gap-2 cursor-pointer hover:bg-[#052440]  ">
+    <div className="bg-orange-100 h-[20px] w-[20px]"></div>
+    <div className='bg-organge-200 text-sm text-white'>Dashboard</div>
+</div>
+
+<div className="bg-orange-300 flex gap-2 cursor-pointer hover:bg-[#052440]  ">
+    <div className="bg-orange-100 h-[20px] w-[20px]"></div>
+    <div className='bg-organge-200 text-sm text-white'>Dashboard</div>
+</div>
+
+<div className="bg-orange-300 flex gap-2 cursor-pointer hover:bg-[#052440]  ">
+    <div className="bg-orange-100 h-[20px] w-[20px]"></div>
+    <div className='bg-organge-200 text-sm text-white'>Dashboard</div>
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+    </div>
+{/* workloads */}
+    <div className="bg-green-400 h-[25%] items-center p-3">
+
+    <div className="bg-slate-200 text-sm font-bold text-white content-start">WORKLOAD</div>
+<div className="bg-orange-400 h-[80%] mt-2 space-y-2 items-start">
+
+{/* individual sidebar option to be clicked */}
+<div className="bg-orange-300 flex gap-2 cursor-pointer hover:bg-[#052440]  ">
+    <div className="bg-orange-100 h-[20px] w-[20px]"></div>
+    <div className='bg-organge-200 text-sm text-white'>Dashboard</div>
+</div>
+
+<div className="bg-orange-300 flex gap-2 cursor-pointer hover:bg-[#052440]  ">
+    <div className="bg-orange-100 h-[20px] w-[20px]"></div>
+    <div className='bg-organge-200 text-sm text-white'>Dashboard</div>
+</div>
+
+<div className="bg-orange-300 flex gap-2 cursor-pointer hover:bg-[#052440]  ">
+    <div className="bg-orange-100 h-[20px] w-[20px]"></div>
+    <div className='bg-organge-200 text-sm text-white'>Dashboard</div>
+</div>
+
+</div>
+
+
+
+    </div>
+
+    {/* general */}
+    <div className="bg-purple-400 h-[15%] items-center p-3">
+
+    <div className="bg-slate-200 text-sm font-bold text-white content-start">GENERAL</div>
+
+<div className="bg-orange-400 h-[70%] mt-2 space-y-2 items-start">
+
+{/* individual sidebar option to be clicked */}
+<div className="bg-orange-300 flex gap-2 cursor-pointer hover:bg-[#052440]  ">
+<div className="bg-orange-100 h-[20px] w-[20px]"></div>
+<div className='bg-organge-200 text-sm text-white'>Dashboard</div>
+</div>
+
+<div className="bg-orange-300 flex gap-2 cursor-pointer hover:bg-[#052440]  ">
+<div className="bg-orange-100 h-[20px] w-[20px]"></div>
+<div className='bg-organge-200 text-sm text-white'>Dashboard</div>
+</div>
+
+
+
+</div>
+
+    </div>
+ 
+
+</div>
+
+
+)
+}
+
+export default Sidebar

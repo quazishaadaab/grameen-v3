@@ -1,11 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { createStore } from 'redux'
 import userReducer from "./userSlice.js"
 import storage from 'redux-persist/lib/storage'
-import {combineReducers} from "redux"; 
 import { FLUSH, PAUSE, PERSIST, persistReducer, PURGE, REGISTER, REHYDRATE } from 'redux-persist'
-import thunk from 'redux-thunk'
-import {payload} from "../pages/Dashboard/[dashboard]"
 
  
 const persistConfig={
@@ -48,10 +44,10 @@ devTools: process.env.NODE_ENV !== 'production',
   
             return{
                 
-                balance:await payload?.balance,
-                expenses:await payload?.expenses,
-                credit:await payload?.credit,
-                account_number:await payload?.account_number,
+                balance:0,
+                expenses:0,
+                credit:0,
+                account_number: 0,
 
             }
         // }

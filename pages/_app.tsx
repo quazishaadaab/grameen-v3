@@ -14,7 +14,6 @@ import {store} from '../reduxs/store'
 
 import {PersistGate} from 'redux-persist/integration/react'
 import {persistStore} from "redux-persist"
-import Test from './test'
 
 
 let persistor = persistStore(store)

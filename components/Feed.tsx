@@ -11,16 +11,22 @@ topic?: string
 
 function Feed( {topic}:Props) {
 
+let data = null ;
 
-  const { data, error } = useQuery(GET_ALL_POSTS_BY_TOPIC, {
-skip:!topic,
+if(topic){
+  const { data :topicData, error } = useQuery(GET_ALL_POSTS_BY_TOPIC, {
 variables: {topic:topic}
   });
 
+  data =topicData ;
+}else{
+  const { data :topicData, error } = useQuery(GET_ALL_POSTS) 
+  data =topicData ;
 
-  // !topic ?useQuery(GET_ALL_POSTS) :
+}
 
-  
+
+
   //if topic doesnt exist, show all posts. if topic exists, show the posts with that topic only
   const posts: Post[] = !topic ? data?.getPostList : data?.getPostListByTopic; // the response that is returned is a json with getPostList as the title/header/object name
   //we specify the type Post[] in typings.d.ts

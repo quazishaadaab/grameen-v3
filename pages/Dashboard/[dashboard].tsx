@@ -151,8 +151,7 @@ console.log(update)
 
 </div>
 
-
-
+<>
 { isItemAccess && linkSuccess ? (
 
 setTimeout(() => {
@@ -168,6 +167,7 @@ setTimeout(() => {
 
 }
 
+</>
 
 
 

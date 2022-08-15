@@ -8,7 +8,7 @@ import { useRouter } from "next/router";
 
 let port = 'http://localhost:8000'
 
-
+//start of plaid
 let loggedIn : boolean
 loggedIn =false
 const Link = () => {

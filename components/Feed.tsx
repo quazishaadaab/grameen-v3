@@ -12,10 +12,12 @@ topic?: string
 function Feed( {topic}:Props) {
 
 
-  const { data, error } = !topic ?useQuery(GET_ALL_POSTS) : useQuery(GET_ALL_POSTS_BY_TOPIC, {
+  const { data, error } = useQuery(GET_ALL_POSTS_BY_TOPIC, {
 skip:!topic,
 variables: {topic:topic}
   });
+
+  
   
   //if topic doesnt exist, show all posts. if topic exists, show the posts with that topic only
   const posts: Post[] = !topic ? data?.getPostList : data?.getPostListByTopic; // the response that is returned is a json with getPostList as the title/header/object name

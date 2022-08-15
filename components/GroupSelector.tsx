@@ -58,7 +58,7 @@ const getRooms=()=>{
 
 
     return (
-    <div onClick={()=>{selectRoom(room?.roomid) }}className="w-full rounded h-10  hover:bg-[#052440] cursor-pointer text-sm text-slate-600 pt-2.5 px-3" ># {room?.roomname}</div>
+    <div onClick={()=>{selectRoom(room?.roomid) }} key={room?.roomname} className="w-full rounded h-10  hover:bg-[#052440] cursor-pointer text-sm text-slate-600 pt-2.5 px-3" ># {room?.roomname}</div>
     )
 })} 
 

@@ -6,7 +6,7 @@ import Header from "../components/Header";
 import { ApolloProvider } from "@apollo/client";
 import { client } from "../apollo-client";
 import { Toaster } from "react-hot-toast";
-import { QuickstartProvider } from "./Dashboard/context";
+import { QuickstartProvider } from "../src/context";
 
 import {Provider} from "react-redux"
 

@@ -1,10 +1,10 @@
 import React, { useEffect, useContext, useCallback, useState } from "react";
-import Header from "./src/Components/Headers/index2";
-import Link from "./src/Components/Link/index";
+import Header from "../../src/Components/Headers/index2";
+import Link from "../../src/Components/Link/index";
 
 
 
-import Context from "./context";
+import Context from "../../src/context";
 import { setFinancialData } from "../../reduxs/userSlice";
 
 

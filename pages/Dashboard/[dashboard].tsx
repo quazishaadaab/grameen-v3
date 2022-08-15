@@ -5,7 +5,7 @@ import Plaid from "./plaid";
 import { useDispatch } from "react-redux";
 import { setFinancialData } from "../../reduxs/userSlice";
 import { useRouter } from "next/router";
-import Context from "./context";
+import Context from "../../src/context";
 import { useSession } from "next-auth/react";
 import SlimSidebar from "../../components/SlimSidebar";
 import Example from "../../components/Chart";

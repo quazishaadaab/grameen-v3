@@ -2,7 +2,7 @@ import React, { useEffect, useContext } from "react";
 import { usePlaidLink } from "react-plaid-link";
 import Button from "plaid-threads/Button";
 
-import Context from "../../../context";
+import Context from "../../context";
 import { useRouter } from "next/router";
 
 

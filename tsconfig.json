@@ -15,6 +15,6 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/GroupSelector.tsx", "components/Option.tsx", "components/Chart.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/GroupSelector.tsx", "components/Option.tsx", "components/Chart.jsx", "pages/Dashboard/src/dataUtilities.mjs", "pages/Dashboard/src/dataUtilities.mjs"],
   "exclude": ["node_modules"]
 }

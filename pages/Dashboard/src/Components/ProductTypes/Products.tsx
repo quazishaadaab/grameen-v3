@@ -28,7 +28,7 @@ import {
   transformAssetsData,
   transformTransferData,
   transformIncomePaystubsData,
-} from "../../dataUtilities";
+} from "../../dataUtilities.js";
 
 const Products = () => {
   const { products } = useContext(Context);

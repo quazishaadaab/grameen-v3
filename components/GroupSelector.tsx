@@ -6,7 +6,7 @@ import { v4 as uuidv4 } from 'uuid';
 function GroupSelector({rooms}:any) {
 
 const router = useRouter()
-const [roomid,setRoomID]=React.useState()
+const [roomid,setRoomID]=React.useState('')
 
 
 

@@ -10,7 +10,8 @@ topic?: string
 }
 
 function Feed( {topic}:Props) {
-  const { data, error } = !topic?useQuery(GET_ALL_POSTS) : useQuery(GET_ALL_POSTS_BY_TOPIC, {
+  const { data, error } = !topic ?useQuery(GET_ALL_POSTS) : useQuery(GET_ALL_POSTS_BY_TOPIC, {
+skip:true,
 variables: {topic:topic}
   });
   

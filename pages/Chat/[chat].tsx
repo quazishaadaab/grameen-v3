@@ -18,6 +18,7 @@ import SlimSidebar from '../../components/SlimSidebar';
 
 function Chat() {
 
+  // roomCollection
   const roomCollection=[{roomid:'1321232',roomname:'PelicanRoom'}, {roomid:'24455',roomname:'Study Room'}]
 const router = useRouter()
   return (

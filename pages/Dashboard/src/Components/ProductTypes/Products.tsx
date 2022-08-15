@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import Endpoint from "../Endpoint";
 import Context from "../../../context";
 
-Context
+
 import ProductTypesContainer from "./ProductTypesContainer";
 import {
   transactionsCategories,
@@ -28,7 +28,7 @@ import {
   transformAssetsData,
   transformTransferData,
   transformIncomePaystubsData,
-} from "../../dataUtilities.js";
+} from "../../dataUtilities";
 
 const Products = () => {
   const { products } = useContext(Context);

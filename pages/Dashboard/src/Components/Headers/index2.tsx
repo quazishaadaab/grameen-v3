@@ -6,7 +6,7 @@ import InlineLink from "plaid-threads/InlineLink";
 import Link from "../Link/index";
 import Context from "../../../context";
 
-import styles from "../../../../../styles/index.module.scss";
+
 
 const Header = () => {
   const {
@@ -20,7 +20,7 @@ const Header = () => {
   } = useContext(Context);
 
   return (
-    <div className={styles.grid}>
+    <div >
 
       {!linkSuccess ? (
         <>
@@ -65,13 +65,13 @@ const Header = () => {
               <div>Error Message: {linkTokenError.error_message}</div>
             </Callout>
           ) : linkToken === "" ? (
-            <div className={styles.linkButton}>
+            <div >
               <Button large disabled>
                 Loading...
               </Button>
             </div>
           ) : (
-            <div className={styles.linkButton}>
+            <div >
               <Link />
             </div>
           )}

@@ -145,7 +145,7 @@ id:notification
   return (
     <form
       onSubmit={onSubmit}
-      className="sticky top-20 z-50 rounded-md border border-gray-300 bg-white p-2"
+      className=" top-20 z-50 rounded-md border border-gray-600 bg-black p-2"
     >
       <div className="flex items-center space-x-3">
         <Avatar />
@@ -159,7 +159,7 @@ id:notification
 
           disabled={!session}
           type="text"
-          className="flex-1 rounded-md bg-gray-50 p-2 pl-5 outline-none"
+          className="flex-1 rounded-md bg-[#1C1C1C] text-white p-2  rounded pl-5 outline-none"
           placeholder={
             session ? subreddit? `Create a post in r/${subreddit}`: "Create a post by entering a title" : "Sign in to post"
           //if subreddit exists due it it coming from the prop(if page is a subreddit page), than dont display title or sign in
@@ -185,10 +185,10 @@ image url fields will not show/appear. therefore, it watches for changes.
       {!!watch("postTitle") && (
         <div className="flex flex-col py-2">
           <div className="flex items-center px-2">
-            <p className="min-w-[90px]">Body:</p>
+            <p className="min-w-[90px] text-white">Body:</p>
             <input
               type="text"
-              className="m-2 flex-1 bg-blue-50 p-2 outline-none"
+              className="m-2 flex-1 bg-[#1C1C1C] text-white p-2 rounded outline-none"
               {...register("postBody")}
               placeholder="text(optional)"
             />
@@ -199,10 +199,10 @@ image url fields will not show/appear. therefore, it watches for changes.
 !subreddit && (
   // insert subreddit
     <div className="flex items-center px-2">
-    <p className="min-w-[90px]">Subreddit</p>
+    <p className="min-w-[90px] text-white">Subreddit</p>
     <input
       type="text"
-      className="m-2 flex-1 bg-blue-50 p-2 outline-none"
+      className="m-2 flex-1 bg-[#1C1C1C] text-white rounded p-2 outline-none"
       {...register("subreddit")}
       placeholder="i.e Scarborough SouthWest"
     />
@@ -217,10 +217,10 @@ image url fields will not show/appear. therefore, it watches for changes.
 
           {imageBoxOpen && (
             <div className="flex items-center px-2">
-              <p className="min-w-[90px]">Image URL</p>
+              <p className="min-w-[90px] text-white">Image URL</p>
               <input
                 type="text"
-                className="m-2 flex-1 bg-blue-50 p-2 outline-none"
+                className="m-2 flex-1 bg-blue-50 p-2 bg-[#1C1C1C] rounded text-white outline-none"
                 {...register('postImage')}
                 placeholder="optional"
               />

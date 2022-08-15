@@ -97,16 +97,16 @@ return displayNumber;
     return (
     
 <Link href={`/post/${post?.id}`}>
-<div className="rounded-md gap-3 mt-1 flex cursor-pointer border border-gray-300 bg-white shadow-sm hover:border hover:border-gray-600">
+<div className="rounded-xl gap-3 mt-1 flex cursor-pointer border border-gray-800 bg-black shadow-sm ">
 
 
 
 
 {/* Votes */}
-<div className="flex flex-col pt-8 pb-9 items-center justify-start space-y-1 rounded-1-md bg-gray-50 p-4 text-gray-400">
+<div className="bg-[#292928] rounded-xl flex flex-col pt-8 pb-9 items-center justify-start space-y-1  p-4 text-gray-400">
 
 <ArrowUpIcon onClick={()=>upVote(true)} className={`voteButtons hover:text-red-400 ${vote && 'text-red-400'}`}/>
-<p className="text-xs font-bold text-black">{displayVotes(data)}</p>
+<p className="text-xs font-bold text-white">{displayVotes(data)}</p>
 <ArrowDownIcon onClick={()=>upVote(false)} className={`voteButtons hover:text-blue-400 ${vote===false && 'text-blue-400'}`}/>
 
 </div>
@@ -121,7 +121,7 @@ return displayNumber;
 <p className="text-xs text-gray-400">
 <Link href={`/subreddit/${post.subreddit[0]?.topic}`}>
 
-<span className="font-bold text-black hover:text-green-400 hover:underline">
+<span className="font-bold text-white hover:text-green-400 hover:underline">
     g/{post.subreddit[0]?.topic}
     </span>
      
@@ -133,8 +133,8 @@ return displayNumber;
 {/* Body */}
 
 <div className="pl-2 ">
-<h2 className="text-xl font-semibold">{post.title}</h2>
-<p className="mt-2 text-sm font-light ">{post.body}</p>
+<h2 className="text-xl font-semibold text-white">{post.title}</h2>
+<p className="mt-2 text-sm font-light text-white">{post.body}</p>
 </div>
 {/* Image */}
 <img src={post.image} alt="" className="w-full" />

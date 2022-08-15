@@ -44,7 +44,7 @@ function Sidebar() {
     <div className='md:text-sm text-[#A5A5A5] w-[90%] hover:text-white 2xl:text-base font-[400]'>Feed </div>
 </div>
 
-<div className=" flex gap-2 cursor-pointer  buttonhover:content-white hover:bg-[#052440] items-center rounded ">
+<div  onClick={()=>{router.push('/Chat/0')}} className=" flex gap-2 cursor-pointer  buttonhover:content-white hover:bg-[#052440] items-center rounded ">
     <div className="  bg-white h-[20px] w-[25px]"></div>
     <div className='md:text-sm text-[#A5A5A5] w-[90%] hover:text-white 2xl:text-base font-[400]'>Chat</div>
 </div>

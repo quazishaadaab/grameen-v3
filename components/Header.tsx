@@ -14,7 +14,8 @@ const {data:session}= useSession();
 
 
   return (
-    <div className='sticky items-center top-0 z-50 flex bg-white px-4 py-2 shadow-sm'> 
+   <>
+    <div className='sticky items-center top-0 z-50 flex bg-black text-white px-3 py-3 shadow-sm'> 
     {/* // need to specify domains when importing images. specify it in next.config.js */}
     {/* need to restart the server when new images are coded in */}
    
@@ -22,8 +23,8 @@ const {data:session}= useSession();
 <Link href="/">
 
 
-   <div className="relative h-10 w-20 flex-shrink-0 cursor-pointer">
-   <img src="https://logomakercdn.truic.com/ux-flow/industry/bank-meta.png"></img>
+   <div className="relative h-12 w-19  rounded object-contain bg-[#292928] flex-shrink-0 cursor-pointer">
+   <img className='w-full h-full' src="https://logomakercdn.truic.com/ux-flow/industry/bank-meta.png"></img>
    </div>
 </Link>
 
@@ -37,10 +38,10 @@ const {data:session}= useSession();
 
    </div>
    
-<form className="flex flex-1 items-center space-x-2 rounded-sm border border-gray-200 bg-gray-100 px-3 py-1">
+<form className="flex flex-1 items-center space-x-2 rounded-sm border border-[#1C1C1C] bg-[#1C1C1C] px-3 py-1">
 <SearchIcon className="h-6 w-6 text-gray-400" />
 
-<input className='flex-1 bg-transparent outline-none' type="text" placeholder="Search Reddit"/>
+<input className='flex-1 bg-[#1C1C1C] outline-none text-white rounded' type="text" placeholder="Search Reddit"/>
 {/* hidden alows us to enter hidden */}
 <button type="submit" hidden />
 
@@ -70,15 +71,15 @@ const {data:session}= useSession();
 {/* hidden makes it dissapear on small screens but the lg:flex makes it visibile on large screens */}
 {/* if session exists, show signout logic(since user is signed in) else show sign in login */}
 {session?(
-   <div onClick={()=>signOut()} className=" hidden cursor-pointer item-center space-x-2 border border-gray-100 p-2 lg:flex">
+   <div onClick={()=>signOut()} className=" hidden cursor-pointer rounded item-center space-x-2 border border-[#1C1C1C] p-2 lg:flex">
 
 
-<div className="relative h-5 w-5 flex-shrink-0">
+<div className="relative h-5 w-5 flex-shrink-0 ">
 <Image src="https://links.papareact.com/23l" layout='fill' alt="" objectFit='contain' />
 </div>
 
 {/* creates the 1karma - and user name box  */}
-<div className="flex-1 text-xs">
+<div className="flex-1 text-xs ">
 <p className="text-gray-400">{session?.user?.name}</p>
 <p className="text-gray-400">1 Karma</p>
 </div>
@@ -113,6 +114,7 @@ const {data:session}= useSession();
 </div>
 
     </div>
+    </>
   )
 }
 

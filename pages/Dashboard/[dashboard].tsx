@@ -10,6 +10,11 @@ import { loggedIn } from "./src/Components/Link";
 import { json } from "stream/consumers";
 import Context from "./context";
 import { useSession } from "next-auth/react";
+import SlimSidebar from "../../components/SlimSidebar";
+import Header from "../../components/Header";
+import Example from "../../components/Chart";
+import { CircularProgress } from "@mui/material";
+
 
 
 type data ={
@@ -124,25 +129,54 @@ console.log(update)
     <>
   
 
- 
+
     <div className="flex h-[100%]">
 
-
       {/* sidebar is flex 15% */}
-      <Sidebar />
+      <SlimSidebar />
 
       {/* code header here */}
 
-      <div className="flex-[85%] mt-9 items-center  p-5 space-y-4 bg-[#1C1C1C] rounded">
-        
+      <div className="flex-[100%]  items-center  py-5 px-5 space-y-4 bg-[#1C1C1C] ">
+
+      
+
         {/* greeting */}
-        <div className=" h-[10%] pl-3 items-center  ">
-          <div className="text-2xl  h-[60%] md:mt-2 text-white font-[400] 2xl:text-3xl  md:text-2xl 2xl:mt-10 ">
+        <div className=" h-[10%] pl-3 items-center flex ">
+
+        
+<div>
+          <div className="text-2xl  h-[60%] md:mt-2 text-white font-[400] 2xl:text-3xl   md:text-2xl 2xl:mt-10 ">
             Dashboard
           </div>
           <div className=" text-sm h-[40%] text-gray-50 ">
 {session?.data?.user?.name ?(`Good to see you again ${session?.data?.user?.name}`):('Good to see you again')}
           </div>
+
+</div>
+
+
+
+{ isItemAccess && linkSuccess ? (
+
+setTimeout(() => {
+  accounts()
+
+}, 0)
+
+):(!account_id && 
+<div className="ml-[50%]"><Plaid/></div>
+
+
+)
+
+}
+
+
+
+
+
+
         </div>
 
 
@@ -152,24 +186,14 @@ console.log(update)
 
 
         {/* app spent */}
-        <div className="bg-[#111111] h-[45%] flex p-2 space-x-3 rounded">
+        <div className="bg-[#111111] h-[45%] flex p-2 space-x-3 pt-5 rounded">
           {/* chart */}
+          <div className="  text-base text-white font-[400] w-[50%] h-[10%] absolute z-20 ml-3">App Spent Summary </div>
+
           <div className="flex-[70%] relative z-0 p-2">
-            <div className="  text-base text-white font-[400] w-[50%] h-[10%] absolute z-20">
-              {" "}
-              App Spent Summary
-              { isItemAccess && linkSuccess ? (
 
-setTimeout(() => {
-  accounts()
+            <div className=" h-[100%] w-[100%]  z-10 p-6 max-h-full max-w-full grid"><Example/></div>
 
-}, 0)
-
-):(!account_id && <Plaid/>)
-
-}
-            </div>
-            <div className=" h-[100%] w-[100%] z-10 p-6">charts</div>
           </div>
 
           {/* financials */}
@@ -180,7 +204,7 @@ setTimeout(() => {
 
 
 
-              <div className="h-[40%] w-[100%] 2xl:text-6xl md:text-5xl text-green-300 font-[100]  ">
+              <div className="h-[40%] w-[100%] 2xl:text-6xl md:text-5xl text-[#17CC49] font-[400]  ">
 
                 {`${account?.current} ${account?.iso_currency_code}`}
               </div>
@@ -196,8 +220,8 @@ Credit Available
             </div>
 
             <div className="h-[50%] w-[100%] items-center space-y-1">
-              <div className=" h-[45%] w-[100%] text-4xl p-y-2 text-red-400 font-[100]">{`${account?.available} ${account?.iso_currency_code}`}</div>
-              <div className=" h-[10%%] w-[20%] text-sm p-2 text-blue-400 border rounded md:text-xs 2xl:text-sm hover:text-blue-400 border-blue-400 cursor-pointer">
+              <div className=" h-[45%] w-[100%] text-4xl p-y-2 text-[#FF9F2D] font-[400]">{`${account?.available} ${account?.iso_currency_code}`}</div>
+              <div className=" h-[10%%] w-[20%] text-sm p-2 pl-3.5 text-blue-400 border rounded md:text-xs 2xl:text-sm hover:text-blue-400 border-blue-400 cursor-pointer">
                 All Apps
               </div>
             </div>
@@ -242,7 +266,7 @@ Credit Available
 <div className='md:text-sm text-[#8D8D8D] 2xl:text-base'>
     <div>Onboarding</div>
     <div>Vendor Risk Assesment</div>
-    <div className='mt-3 text-blue-700'>See All</div>
+    <div className='mt-3 text-white cursor-pointer'>See All</div>
 
 </div>
               
@@ -260,7 +284,7 @@ Credit Available
 
 {/* header of myTasks */}
           <div className="flex h-[10%]">
-          <div className=" text-white w-[90%]">MyTasks</div><div className="w-[10%] text-sm">See All</div>
+          <div className=" text-white w-[90%]">MyTasks</div><div className="w-[10%] text-sm text-white cursor-pointer">See All</div>
           </div>
 
 {/* ciruclar progress bars */}
@@ -269,7 +293,10 @@ Credit Available
                 <div className=" h-[50%] ">
 
                 <div className="flex h-full">
-                <div className="bg-green-200  flex-[20%]">Progress Bar</div>
+                <div className=" p-2 flex-[20%]">
+                <CircularProgress variant="determinate" value={80} size={70} />
+
+                </div>
 
                 <div className=" space-y-1 flex-[80%] items-center pl-3">
 
@@ -289,8 +316,12 @@ Credit Available
 
 <div className=" h-[50%] ">
 <div className="flex h-full">
-                <div className="bg-green-200  flex-[20%]">Progress Bar</div>
 
+
+<div className=" p-2 flex-[20%]">
+                <CircularProgress variant="determinate" value={35} size={70} />
+
+                </div>
                 <div className=" space-y-1 flex-[80%] items-center p-3">
 
                 <div className='text-base text-white'>Oboarding Salsabilla Hampton</div>

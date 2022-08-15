@@ -59,7 +59,7 @@ id:notification,})
   return (
 
 // Display the post only 
-<div className='mx-auto my-7 max-w-5xl'>
+<div className='mx-auto my-7 max-w-5xl '>
 <Post post={post}/> 
 
 {/* Comment Section */}

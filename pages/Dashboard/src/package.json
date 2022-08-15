@@ -33,7 +33,8 @@
   },
   "eslintConfig": {
     "extends": [
-      ]
+      
+    ]
   },
   "browserslist": {
     "production": [

@@ -85,8 +85,8 @@ const Link = () => {
 
   return (
     <Button type="button" large onClick={() => open()} disabled={!ready}>
-      Launch Link
-    </Button>
+Connect to Bank 
+   </Button>
   );
 };
 
